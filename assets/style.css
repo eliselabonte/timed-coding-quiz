@@ -1,5 +1,13 @@
 html    {
-    /* declare variables for color */
+    --lightgray:#F5F0E1;
+    --darkblue: #1E3d59;
+    --orange:#FF6E40;
+    --yellow:#FFC13B;
+    --lightyellow:#FDD794;
+    --lightblue: #5B98C7;
+    --headfont:'El Messiri', sans-serif;
+    --bodyfont:'Didact Gothic', sans-serif;
+    --bodybackground:repeating-linear-gradient(0deg, #1E3d59 0% 5%, #FF6E40 5% 10%, #FFC13B 10% 30%, #F5F0E1 30% 100%);
 }
 
 body    {
@@ -7,7 +15,7 @@ body    {
     width:100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color:bisque;
+    background:var(--bodybackground);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +24,7 @@ body    {
 
 header  {
     width:100%;
-    background-color: pink;
+    background-color: var(--orange);
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -28,11 +36,12 @@ header  {
 }
 
 h1  {
-    font-family: ;
+    font-family: var(--headfont);
     font-size: 30px;
 }
 
 h2  {
+    font-family: var(--bodyfont);
     margin:10px;
 }
 
@@ -46,19 +55,19 @@ main    {
 }
 
 div    {
-    background-color: aquamarine;
+    background-color: var(--lightblue);
     border-radius:20px;
 }
 
-label   {
+div > label   {
     font-size:20px;
-    font-family: ;
-    background-color: azure;
+    font-family: var(--headfont);
+    background-color:var(--yellow);
     border-radius:20px 20px 0px 0px;
     padding:10px;
 }
 
-ul  {
+div > ul  {
     font-size:20px;
     display:flex;
     flex-direction: column;
@@ -67,22 +76,32 @@ ul  {
     padding:30px;
 }
 
-li  {
+div ul > li  {
     width:60%;
     height:30px;
     border-radius: 10px;
-    background-color: burlywood;
     margin:10px;
     padding:5px;
+    font-family: var(--bodyfont);
+    background-color: var(--lightyellow);
     text-align: center;
 }
 
+li:hover{
+    background-color: var(--orange);
+}
+
 span.counter-and-score  {
-    
     margin:50px;
-    margin-bottom: 80px;
-    border:5px solid palevioletred;
-    
+    margin-bottom: 100px;
+    width:150px;
+    height:80px;
+    border:5px solid var(--darkblue);
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div.no-display  {
