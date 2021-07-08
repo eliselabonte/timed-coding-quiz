@@ -20,68 +20,43 @@
 
         <main id="quizContainer" class="container">
 
-            <!-- display question for styling purposes -->
-            <!-- <div>
-                <label class="test-question" for="test-question">What language is primarily used to style html?</label>
-                <ul class="answers" name="test-question">
-                    <li>butts</li>
-                    <li>nuts</li>
-                    <li>coconuts</li>
-                    <li>another answer</li>
-                </ul>
-            </div> -->
-
+            <!-- start button -->
+           
+            <button>Start Quiz</button>
 
             <!-- begin actual questions -->
-            <div id="question1" class="no-display">
-                <label class="question" for="question1" data-question="">What language is primarily used to style html?</label>
-                <ul class="answers" name="question1">
-                    <li data-answer="">JavaScript</li>
-                    <li data-answer="">JavaQuery</li>
-                    <li data-answer="">CSS</li>
-                    <li data-answer="">Python</li>
-                </ul>
+            <div id="prompt" class="container-child, no-display">
+                <div class="prompt-block">
+                    <h2 class="question" for="answers">SOME BIG LONG QUESTION OR WHATEVER</h2>
+                    <ul class="answers" name="answers">
+                        <li>stuff</li>
+                        <li>stuff</li>
+                        <li>stuff</li>
+                        <li>stuff</li>
+                    </ul>
+                </div>
             </div>
 
-            <div id="question2" class="no-display">
-                <label class="question" for="question2" data-question="Which CSS position setting causes the item to keep its place on the screen regardless of scroll?"></label>
-                <ul class="answers" name="question2">
-                    <li data-answer="absolute"></li>
-                    <li data-answer="fixed"></li>
-                    <li data-answer="relative"></li>
-                    <li data-answer="static"></li>
-                </ul>
-            </div>
+            <aside class="past-attempt-sidebar">
+                <h2 class="past-attempts">Past attempts on this device:</h2>
+                <h3 id="pastAttempts"></h3>
 
-            <div id="question3" class="no-display">
-                <label class="question" for="question3" data-question="What syntax is used to declare a variable in JavaScript?"></label>
-                <ul class="answers" name="question3">
-                    <li data-answer="var, const, let"></li>
-                    <li data-answer="function, var"></li>
-                    <li data-answer="attr"></li>
-                    <li data-answer="for, if, else"></li>
-                </ul>
-            </div>
+                <span class="counter-and-score">
+                        
+                    <h2 id="counter">2:00</h2>
+                    <h2 id="score">score style</h2>
+                    
+                </span>
+            </aside>
 
-            <div id="question4" class="no-display">
-                <label class="question" for="question4" data-question=""></label>
-                <ul class="answers" name="question4">
-                    <li data-answer=""></li>
-                    <li data-answer=""></li>
-                    <li data-answer=""></li>
-                    <li data-answer=""></li>
-                </ul>
+            <div class="no-display" id="saveUserData">
+                <label for="saveInitials">Your Initials:</label>
+                <input name="saveInitials" id="saveInitials">
+                <span id="finalScoreDisplay"></span>
             </div>
 
         </main>
 
-
-        <span class="counter-and-score">
-                
-            <h2 id="counter">counter style</h2>
-            <h2 id="score">score style</h2>
-            
-        </span>
 
         <script src="./assets/script.js"></script>
     </body>
