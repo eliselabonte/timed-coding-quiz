@@ -7,7 +7,7 @@ html    {
     --lightblue: #5B98C7;
     --headfont:'El Messiri', sans-serif;
     --bodyfont:'Didact Gothic', sans-serif;
-    --bodybackground:repeating-linear-gradient(0deg, #1E3d59 0% 5%, #FF6E40 5% 10%, #FFC13B 10% 30%, #F5F0E1 30% 100%);
+    --bodybackground:repeating-linear-gradient(0deg, #1E3d59 0% 10%, #FF6E40 10% 20%, #FFC13B 20% 40%, #F5F0E1 40% 100%);
 }
 
 body    {
@@ -29,6 +29,7 @@ header  {
     position:fixed;
     top:0;
     left:0;
+    z-index:100;
 }
 
 h1  {
@@ -54,6 +55,7 @@ main    {
 div.prompt-block    {
     background-color: var(--lightblue);
     border-radius:20px;
+    width:50vw;
 }
 
 div.container-child {
@@ -64,13 +66,14 @@ div.container-child {
     margin-bottom:15%;
 }
 
-div > h2.question   {
+div > p.question   {
     font-size:20px;
     font-family: var(--headfont);
     background-color:var(--yellow);
     border-radius:20px 20px 0px 0px;
     padding:10px;
     word-wrap: break-word;
+    text-align:center;
 }
 
 div > ul  {
@@ -97,7 +100,7 @@ li:hover, button:hover{
     background-color: var(--orange);
 }
 
-button {
+button.startButton {
     font-family: var(--headfont);
     font-size:20px;
     position:fixed;
@@ -124,9 +127,6 @@ span.counter-and-score  {
     align-items: center;
 }
 
-.no-display  {
-    display:none;
-}
 
 aside.past-attempt-sidebar  {
     display:flex;
@@ -145,3 +145,66 @@ aside.past-attempt-sidebar  {
 aside.past-attempt-sidebar > h2 {
     margin-top: 80px;
 }
+
+form.saveData    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+div.initials-box, div.score-box {
+    margin:10px;
+}
+
+form.saveData label {
+    font-family: var(--bodyfont);
+    font-size: 20px;
+} 
+
+div.saveData input {
+    height:20px;
+    font-family: var(--bodyfont);
+    font-size: 18px;
+    border:none;
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: var(--lightgray);
+}
+
+span.score-span  {
+    background-color: var(--lightyellow);
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    padding:5px;
+    margin-left:10px;
+}
+
+div.retakeButtonDiv {
+    margin-top:30px;
+
+}
+
+button.retakeButton   {
+    background-color: var(--lightblue);
+    border:none;
+    border-radius: 20px;
+    font-family: var(--bodyfont);
+    font-size: 20px;
+    /* margin:10px; */
+}
+
+button.retakeButton:hover   {
+    background-color: var(--darkblue);
+}
+
+
+.no-display  {
+    display:none;
+}
+

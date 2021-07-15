@@ -8,6 +8,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=El+Messiri:wght@600&display=swap" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -22,12 +26,12 @@
 
             <!-- start button -->
            
-            <button>Start Quiz</button>
+            <button class="startButton">Start Quiz</button>
 
             <!-- begin actual questions -->
-            <div id="prompt" class="container-child, no-display">
+            <div id="prompt">
                 <div class="prompt-block">
-                    <h2 class="question" for="answers"></h2>
+                    <p class="question" for="answers"></p>
                     <ul class="answers" name="answers">
                         <li></li>
                         <li></li>
@@ -49,11 +53,21 @@
                 </span>
             </aside>
 
-            <div class="no-display" id="saveUserData">
-                <label for="saveInitials">Your Initials:</label>
-                <input name="saveInitials" id="saveInitials">
-                <span id="finalScoreDisplay"></span>
-            </div>
+            <form id="saveUserData">
+
+                <div class="initials-box">
+                    <label for="saveInitials">Your Initials:</label>
+                    <input name="saveInitials" id="saveInitials">
+                </div>
+                <div class="score-box">
+                    <label for="finalScore">Your final score:</span>
+                    <span class="score-span" id="finalScoreDisplay" name="finalScore">50</span>
+                </div>
+                <div class="retakeButtonDiv">
+                    <button type="submit" class="retakeButton" id="saveData">Save My Score!</button>
+                    <button type="button" class="retakeButton" id="noSaveData">Retake Without Saving</button>
+                </div>
+            </form>
 
         </main>
 
